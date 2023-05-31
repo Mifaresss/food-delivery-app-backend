@@ -18,7 +18,7 @@ app.get('/stores', async (req, res) => {
       const stores = await MainData.findOne()
       res.json(stores.shops)
    } catch (e) {
-      console.log(e.message)
+      console.log(e)
    }
 })
 
