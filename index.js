@@ -1,8 +1,9 @@
+import 'dotenv/config'
 import express from 'express'
 import mongoose from 'mongoose'
 import MainData from './models/MainData.js'
 import Order from './models/Order.js'
-const DB_URL = 'mongodb+srv://Mifares:shokirovan@firstcluster.afg2qiu.mongodb.net/food-delivery?retryWrites=true&w=majority'
+const DB_URL = process.env.MONGO_URL
 const PORT = process.env.PORT || 8080
 const app = express()
 app.use(express.json())
